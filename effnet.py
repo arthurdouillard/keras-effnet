@@ -37,7 +37,7 @@ def get_block(x_in, ch_in, ch_out):
 
 
 def Effnet(input_shape, nb_classes, include_top=True, weights=None):
-    x_in = Input(shape=(32,32,3))
+    x_in = Input(shape=input_shape)
 
     x = get_block(x_in, 32, 64)
     x = get_block(x, 64, 128)
